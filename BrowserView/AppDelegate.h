@@ -7,9 +7,22 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <WebKit/WebKit.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate>{
+    Boolean inLoop;
+    dispatch_queue_t browseQueue;
+}
+    
 
+@property (weak) IBOutlet WebView *view;
+- (IBAction)openURl:(id)sender;
+@property (unsafe_unretained) IBOutlet NSPanel *panel;
+- (IBAction)goToURL:(id)sender;
+@property (strong) NSMutableArray* tasks;
 @property (assign) IBOutlet NSWindow *window;
+- (IBAction)cancel:(id)sender;
+
+@property (weak) IBOutlet NSButton *checkBox;
 
 @end

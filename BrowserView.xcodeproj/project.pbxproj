@@ -17,6 +17,8 @@
 		AAF1BF8518221CA600F01AC3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF1BF6518221CA600F01AC3 /* Cocoa.framework */; };
 		AAF1BF8D18221CA600F01AC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAF1BF8B18221CA600F01AC3 /* InfoPlist.strings */; };
 		AAF1BF9018221CA600F01AC3 /* BrowserViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF1BF8F18221CA600F01AC3 /* BrowserViewTests.m */; };
+		AAF1BF9A182222F100F01AC3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF1BF99182222F100F01AC3 /* WebKit.framework */; };
+		AAF1BFA91822713400F01AC3 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF1BFA81822713400F01AC3 /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		AAF1BF8C18221CA600F01AC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AAF1BF8E18221CA600F01AC3 /* BrowserViewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowserViewTests.h; sourceTree = "<group>"; };
 		AAF1BF8F18221CA600F01AC3 /* BrowserViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowserViewTests.m; sourceTree = "<group>"; };
+		AAF1BF99182222F100F01AC3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		AAF1BFA71822713400F01AC3 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		AAF1BFA81822713400F01AC3 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF1BF9A182222F100F01AC3 /* WebKit.framework in Frameworks */,
 				AAF1BF6618221CA600F01AC3 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +81,7 @@
 		AAF1BF5918221CA600F01AC3 = {
 			isa = PBXGroup;
 			children = (
+				AAF1BF99182222F100F01AC3 /* WebKit.framework */,
 				AAF1BF6B18221CA600F01AC3 /* BrowserView */,
 				AAF1BF8818221CA600F01AC3 /* BrowserViewTests */,
 				AAF1BF6418221CA600F01AC3 /* Frameworks */,
@@ -114,10 +121,12 @@
 		AAF1BF6B18221CA600F01AC3 /* BrowserView */ = {
 			isa = PBXGroup;
 			children = (
-				AAF1BF7718221CA600F01AC3 /* AppDelegate.h */,
 				AAF1BF7818221CA600F01AC3 /* AppDelegate.m */,
-				AAF1BF7A18221CA600F01AC3 /* MainMenu.xib */,
+				AAF1BF7718221CA600F01AC3 /* AppDelegate.h */,
 				AAF1BF6C18221CA600F01AC3 /* Supporting Files */,
+				AAF1BF7A18221CA600F01AC3 /* MainMenu.xib */,
+				AAF1BFA71822713400F01AC3 /* Task.h */,
+				AAF1BFA81822713400F01AC3 /* Task.m */,
 			);
 			path = BrowserView;
 			sourceTree = "<group>";
@@ -263,6 +272,7 @@
 			files = (
 				AAF1BF7218221CA600F01AC3 /* main.m in Sources */,
 				AAF1BF7918221CA600F01AC3 /* AppDelegate.m in Sources */,
+				AAF1BFA91822713400F01AC3 /* Task.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +462,7 @@
 				AAF1BF9518221CA600F01AC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAF1BF9618221CA600F01AC3 /* Build configuration list for PBXNativeTarget "BrowserViewTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +471,7 @@
 				AAF1BF9818221CA600F01AC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
