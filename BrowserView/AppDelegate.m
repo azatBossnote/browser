@@ -20,17 +20,12 @@
 
 
 - (IBAction)openURl:(id)sender {
-   [NSApp beginSheet:_panel
+    [NSApp beginSheet:_panel
        modalForWindow:(NSWindow *)_window
         modalDelegate:self
-      didEndSelector:nil
+       didEndSelector:nil
           contextInfo:nil];
-    
 }
-//- (IBAction)createAlertPanel:(id)sender {
-//   NSRunAlertPanel(@"Error", @"Fields can't be empty", @"OK", nil, nil);
-//}
-
 - (IBAction)goToURL:(id)sender {
     [self fixData];
     inLoop=NO;
@@ -63,11 +58,10 @@
         if([_checkBox state]){
             inLoop=YES;
             while (inLoop) {
-
-//                for(int i=0;i<[_tasks count];i++){
-//                    dispatch_async(dispatch_get_main_queue(), ^{[self update:i];});
-//                    sleep([[_tasks[i] time] intValue]);
-//                }
+                for(int i=0;i<[_tasks count];i++){
+                    dispatch_async(dispatch_get_main_queue(), ^{[self update:i];});
+                    sleep([[_tasks[i] time] intValue]);
+                }
                 
             }
         } else {

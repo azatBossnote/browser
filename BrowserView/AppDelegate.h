@@ -10,7 +10,7 @@
 #import <WebKit/WebKit.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>{
-    Boolean inLoop;
+    __block Boolean inLoop;
     dispatch_queue_t browseQueue;
 }
     
